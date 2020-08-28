@@ -1,9 +1,13 @@
 :root {
   --black: #121212;
+  --dark-opacity: #0003;
   --dark: #333;
+  --dark-opacity: #3331;
   --light: #fff;
-  --success: #2ebd59;
+  --success: #7159c1;
   --light-grey: #f2f2f5;
+  --grey-opacity: #eee3;
+  --red: #E13612;
   font-size: 60%;
 }
 
@@ -33,6 +37,11 @@ button {
   width: 90vw;
   max-width: 1100px;
   margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark);
 }
 
 @media (min-width: 700px) {
