@@ -1,0 +1,124 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 90px;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #282828;
+  color: #fff;
+  font-size: 1.4rem;
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: 250px 1fr 200px;
+}
+
+footer .playing {
+  display: flex;
+}
+
+footer .playing div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0.8rem;
+}
+
+footer .playing div span {
+  color: #888;
+}
+
+footer .playing img {
+  width: 60px;
+  height: 60px;
+}
+
+footer .controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+footer .controls div i {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+footer .controls div .fa-play {
+  margin: 0 1.4rem;
+}
+
+footer .controls .music-time-container {
+  max-width: 380px;
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 0.10rem;
+  background-color: var(--grey-opacity);
+  padding: 0;
+}
+
+footer .controls .music-time-progress {
+  background: var(--light);
+}
+
+footer .volume {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+footer .volume .volume-container {
+  max-width: 120px;
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--grey-opacity);
+  padding: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+input[type=range] {
+  -webkit-appearance: none; 
+  height: 0.5rem;
+  width: 100%;
+  background-color: var(--grey-opacity);
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px; 
+  height: 12px; 
+  border-radius: 50%;
+  background: var(--light); 
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  footer {  
+    display: grid;
+    align-items: center;
+    grid-template-columns: 80px 1fr 100px;
+  }
+
+  footer .playing div {
+    display: none;
+  }
+
+  .volume-progress {
+    margin-right: 0.8rem;
+  }
+
+  .fa-volume-up {
+    margin: 0.8rem;
+  }
+
+}

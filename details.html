@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
     <!-- Style -->
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/details.css">
+    <link rel="stylesheet" href="./styles/player.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/137131e49f.js" crossorigin="anonymous"></script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     
-    <title>Spotify</title>
+    <title>GoMusic</title>
   </head>
   <body>
     <header>
@@ -23,8 +25,8 @@
       <div class="grid-album">
         <img id="albumImage" src="./images/avicii.jpg" alt="Avicii">
         <div class="details-album">
-          <strong id="albumTitle">Avicii</strong>
-          <span id="albumSong">Stories</span>
+          <strong id="albumTitle"></strong>
+          <span id="albumSong"></span>
         </div>
       </div>
     </main>
@@ -39,34 +41,33 @@
     </audio>
 
     <footer>
-      <div class="top">
-        <i class="fas fa-volume-mute" onclick="unmute()"></i>
-        <i class="fas fa-volume-up" onclick="mute()"></i>
-        <div class="controls">
-          <i class="fas fa-minus" onclick="changeVolume('minus')"></i>
-          <div class="volume-container">
-            <div class="volume-progress"></div>
-          </div>
-          <i class="fas fa-plus" onclick="changeVolume('plus')"></i>
+      <div class="playing">
+        <img src="./images/alok.jpg" id="albumPhoto" alt="Album">
+        <div>
+          <strong id="albumName"></strong>
+          <span id="musicName"></span>
         </div>
       </div>
-  
-      <div class="bottom">
-        <span><i class="fas fa-play-circle"></i>
-          <strong id="music-playing-name"></strong>
-        </span>
+      <div class="controls">
+        <div>
+          <i class="fas fa-step-backward" onclick="prevMusic()"></i>
+          <i class="fas fa-play" onclick="playAndPause()"></i>
+          <i class="fas fa-forward" onclick="skipMusic()"></i>
+        </div>
         <div class="music-time-container">
           <div class="music-time-progress"></div>
         </div>
-        <div>
-          <!-- <i class="fas fa-backward"></i> -->
-          <i class="fas fa-play play-bigger" onclick="playAndPause()"></i>
-          <!-- <i class="fas fa-forward"></i> -->
+     </div>
+      <div class="volume">
+        <i class="fas fa-volume-up"></i>
+        <div class="volume-container" >
+          <input id="volume" type="range">
         </div>
       </div>
     </footer>
     
-    <script src="./script/spotify.js"></script>
+    <script src="./script/player.js"></script>
+    <script src="./script/data.js"></script>
     <script src="./script/details.js"></script>
   </body>
 </html>
