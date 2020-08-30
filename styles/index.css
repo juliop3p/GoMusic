@@ -88,31 +88,8 @@ li strong {
   transform: scale(1.1);
 }
 
-/* audio {
-  display: none;
-} */
-
 @media (max-width: 700px) {
   li {
     margin-bottom: 3.2rem;
   }
-
-  /* footer .bottom span {
-    display: none;
-  }
-
-  .bottom .music-time-container {
-    max-width: 180px;
-  } */
-
-}
-
-@media(max-width: 450px) {
-  /* .bottom .music-time-container {
-    display: none;
-  } */
-
-  /* .bottom {
-    justify-content: center;
-  } */
 }
