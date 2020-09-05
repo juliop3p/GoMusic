@@ -15,11 +15,19 @@
 
   <title>GoMusic</title>
 </head>
-<body>
+<body onload="verifyLogin()">
   <header>
+    <div></div>
     <a href="/landing.html">
       <img src="./images/logo.png" alt="Spotify">
     </a>
+    <i class="far fa-user"></i>
+    <div class="user-details">
+      <ul>
+        <li id="username"><i class="fas fa-user-circle"></i> </li>
+        <li onclick="logout()"><i class="fas fa-sign-out-alt"></i> Sair</li>
+      </ul>
+    </div>
   </header>
   <main class="col">
     <h1>Sua coleção preferida</h1>
@@ -55,7 +63,8 @@
     </div>
    </div>
   </footer>
-
+  
+  <script src="./script/auth.js"></script>
   <script src="./script/data.js"></script>
   <script src="./script/player.js"></script>
   <script src="./script/index.js"></script>

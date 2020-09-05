@@ -1,0 +1,136 @@
+body {
+  font-family: 'Roboto';
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+main div img {
+  width: 300px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-container {
+  width: 100%;
+  height: 100vh;
+  background: var(--success);
+  color: var(--light);
+  position: relative;
+}
+
+.content {
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+  justify-self: center;
+  height: 100vh;
+  padding: 3.2rem 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+form {
+  width: 100%;
+  padding: 1.6rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+form .input-block {
+  position: relative;
+} 
+
+form .input-block .input {
+  max-width: 600px;
+  width: 100%;
+  height: 6.4rem;
+  border: 1px solid var(--light-grey);
+  padding: 0 1.6rem;
+  outline: none;
+}
+
+form .input-block:focus-within::after {
+  width: 3px;
+  height: calc(100% - 3.2rem);
+  content: '';
+  background: var(--green-dark);
+  position: absolute;
+  left: 0;
+  top: 1.6rem;
+  bottom: 1.56rem;
+}
+
+form .input-block:nth-child(3) input {
+  border-radius: 0.8rem 0.8rem 0px 0px;
+} 
+
+form .input-block:nth-child(5) input {
+  border-radius: 0 0 0.8rem 0.8rem;
+} 
+
+form button {
+  max-width: 600px;
+  height: 6.4rem;
+  border-radius: 0.8rem;
+  border: none;
+  color: var(--light);
+  background-color: var(--green-dark);
+  margin-top: 2.4rem;
+  outline: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--green);
+}
+
+form h1 {
+  font-size: 3.2rem;
+}
+
+form p {
+  font-size: 1.6rem;
+  color: #e2e2e2;
+  margin-bottom: 2.4rem;
+}
+
+a {
+  font-size: 1.4rem;
+  color: var(--light);
+}
+
+.logo-for-small-screen-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10.2rem;
+}
+
+.logo-for-small-screen-container img {
+  width: 16rem;
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    display: none;
+  }
+
+  .logo-for-small-screen-container img {
+    display: block;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+}

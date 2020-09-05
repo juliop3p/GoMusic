@@ -1,4 +1,13 @@
+document.querySelector('body').onload = verifyLogin();
+
 const list = document.querySelector('.album-list');
+
+document.querySelector('.fa-user').onclick = () => {
+  const user = document.querySelector('.user-details')
+  user.style.display = user.style.display === 'block' ? 'none' : 'block';
+}
+
+document.querySelector('#username').innerHTML = `<i class="fas fa-user-circle"></i> ${userName}`;
 
 const createAlbumItem = (musics) => {
   const { id, image, album } = musics;
